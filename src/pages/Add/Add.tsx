@@ -2,9 +2,11 @@ import { type FormEvent, type ReactNode } from "react";
 
 import axios from "axios";
 
+import Button from "../../components/Button/Button.tsx";
+
 import type { Book } from "../../types/book.ts";
 
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 
 import { toast } from "react-toastify";
 
@@ -12,7 +14,7 @@ import styles from "./Add.module.css";
 
 export default function Add(): ReactNode {
   const navigate = useNavigate();
-  
+
   const handleSubmitForm = async (
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
@@ -34,7 +36,7 @@ export default function Add(): ReactNode {
 
     const newBook = {
       title: title.toString(),
-      releaseDate : releaseDate.toString(),
+      releaseDate: releaseDate.toString(),
       desc: desc.toString(),
       pages: pages.toString(),
       price: Number(price),
@@ -53,7 +55,7 @@ export default function Add(): ReactNode {
     try {
       await axios.post("http://localhost:5000/books", book);
       toast.success("Book has been added successfully !");
-      navigate("/")
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -71,7 +73,7 @@ export default function Add(): ReactNode {
         <input type="number" name="price" placeholder="price" />
         <textarea rows={3} name="desc" placeholder="desc" />
 
-        <button type="submit">Submit</button>
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   );

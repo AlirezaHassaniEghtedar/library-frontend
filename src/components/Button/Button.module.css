@@ -1,18 +1,63 @@
-.button:has(a) {
-    border: none;
+.button {
+  border: none;
+  border-radius: var(--border-radius-100);
 
-    cursor: pointer;
+  transition: var(--transition);
 
-    a {
-        display: inline-block;
+  &:hover,
+  &:focus {
+    outline: none;
 
-        border-radius: var(--border-radius-100);
+    transform: translateY(-2px);
+  }
 
-        background-color: var(--color-primary);
-        color: var(--color-text-100) ;
+  &.primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-100);
 
-        padding: 0.5rem;
-
-        inline-size: 100%;
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary-hover);
     }
+  }
+
+  &.danger {
+    background-color: var(--color-danger);
+    color: var(--color-text-100);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-danger-hover);
+    }
+  }
+}
+
+.button:not(:has(a)) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+
+  cursor: pointer;
+
+  a {
+    display: inline-block;
+
+    inline-size: 100%;
+  }
+}
+
+.button:has(a) {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+
+    inline-size: 100%;
+  }
 }

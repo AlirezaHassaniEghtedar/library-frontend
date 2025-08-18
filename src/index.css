@@ -2,14 +2,19 @@
   --color-surface-300: hsl(0, 0%, 99%);
   --color-surface-400: hsl(0, 0%, 95%);
 
-  --color-border-100: hsl(0  0%  90%);
-  --color-border-200: hsl(0  0%  80%);
-  --color-border-300: hsl(0  0%  70%);
+  --color-border-100: hsl(0 0% 90%);
+  --color-border-200: hsl(0 0% 80%);
+  --color-border-300: hsl(0 0% 70%);
 
   --color-primary: hsl(204, 99%, 52%);
   --color-primary-fade: hsl(204, 99%, 92%);
-  --color-primary-hover: hsl(204, 96%, 60%);
+  --color-primary-hover: hsl(204, 96%, 48%);
   --color-primary-hover-dark: hsl(204, 96%, 20%);
+
+  --color-danger: hsl(0, 99%, 52%);
+  --color-danger-fade: hsl(0, 99%, 92%);
+  --color-danger-hover: hsl(0, 96%, 48%);
+  --color-danger-hover-dark: hsl(0, 96%, 20%);
 
   --color-text-100: hsl(0, 0%, 100%);
   --color-text-200: hsl(0, 0%, 65%);
@@ -65,14 +70,6 @@ a {
   text-decoration: none;
 
   color: inherit;
-}
-
-button {
-  transition: var(--transition);
-
-  &:hover {
-    transform: translateY(-2px);
-  }
 }
 
 body {

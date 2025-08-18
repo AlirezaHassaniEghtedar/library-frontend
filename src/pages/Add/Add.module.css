@@ -1,56 +1,43 @@
 .add {
+  display: grid;
+
+  margin: auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
     display: grid;
+    gap: 0.5rem;
 
-    margin: auto;
+    margin-block: 1rem;
 
-    h2 {
-        text-align: center;
+    font-size: var(--fz-500);
+
+    input,
+    textarea {
+      border: 1px solid var(--color-border-100);
+      border-radius: var(--border-radius-100);
+      outline: none;
+
+      caret-color: var(--color-text-300);
+
+      padding: 0.5rem;
+
+      transition: var(--transition);
+
+      &:hover,
+      &:focus {
+        border-color: var(--color-primary);
+      }
     }
 
-    form {
-        display: grid;
-        gap: 0.5rem;
+    textarea {
+      resize: vertical;
 
-        margin-block: 1rem;
-
-        font-size: var(--fz-500);
-
-        input ,
-        textarea {
-            border: 1px solid var(--color-border-100);
-            border-radius: var(--border-radius-100);
-            outline: none;
-
-            caret-color: var(--color-text-300);
-
-            padding: 0.5rem;
-
-            transition: var(--transition);
-
-            &:hover,
-            &:focus {
-                border-color: var(--color-primary);
-            }
-        }
-
-        textarea {
-            resize: vertical;
-
-            min-block-size: 3em;
-            max-block-size: 10em;
-        }
-
-        button {
-            border: none;
-            border-radius: var(--border-radius-100);
-
-            background-color: var(--color-primary);
-            color: var(--color-text-100) ;
-
-            padding: 0.5rem;
-
-
-            cursor: pointer;
-        }
+      min-block-size: 3em;
+      max-block-size: 10em;
     }
+  }
 }

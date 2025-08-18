@@ -1,9 +1,27 @@
-import { type PropsWithChildren, type ReactNode } from "react";
+import { type ComponentProps, type ReactNode } from "react";
 
 import styles from "./Button.module.css";
 
-type Props = PropsWithChildren;
+import clsx from "clsx";
 
-export default function Button({ children }: Props): ReactNode {
-  return <button className={styles.button}>{children}</button>;
+type Color = "primary" | "danger";
+
+type Props = ComponentProps<"button"> & {
+  color?: Color;
+};
+
+export default function Button({
+  children,
+  color = "primary",
+  className,
+  ...otherProps
+}: Props): ReactNode {
+  return (
+    <button
+      className={clsx(styles.button, styles[color], className)}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
 }
