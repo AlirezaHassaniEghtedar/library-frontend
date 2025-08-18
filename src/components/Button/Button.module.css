@@ -1,0 +1,18 @@
+.button:has(a) {
+    border: none;
+
+    cursor: pointer;
+
+    a {
+        display: inline-block;
+
+        border-radius: var(--border-radius-100);
+
+        background-color: var(--color-primary);
+        color: var(--color-text-100) ;
+
+        padding: 0.5rem;
+
+        inline-size: 100%;
+    }
+}

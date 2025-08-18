@@ -1,0 +1,87 @@
+:root {
+  --color-surface-300: hsl(0, 0%, 99%);
+  --color-surface-400: hsl(0, 0%, 95%);
+
+  --color-border-100: hsl(0  0%  90%);
+  --color-border-200: hsl(0  0%  80%);
+  --color-border-300: hsl(0  0%  70%);
+
+  --color-primary: hsl(204, 99%, 52%);
+  --color-primary-fade: hsl(204, 99%, 92%);
+  --color-primary-hover: hsl(204, 96%, 60%);
+  --color-primary-hover-dark: hsl(204, 96%, 20%);
+
+  --color-text-100: hsl(0, 0%, 100%);
+  --color-text-200: hsl(0, 0%, 65%);
+  --color-text-300: hsl(0, 0%, 40%);
+  --color-text-400: hsl(0, 0%, 10%);
+
+  --border-radius-100: 0.25rem;
+  --border-radius-200: 0.5rem;
+  --border-radius-300: 0.75rem;
+  --border-radius-400: 1rem;
+
+  --transition: all ease 0.3s;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Vazirmatn", system-ui;
+
+  caret-color: transparent;
+
+  scroll-behavior: smooth;
+}
+
+input,
+label,
+select,
+textarea,
+button,
+fieldset,
+legend,
+datalist,
+output,
+option,
+optgroup {
+  font-family: inherit;
+
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+button {
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+body {
+  background-color: var(--color-surface-300);
+  color: var(--color-text-400);
+
+  inline-size: min(75rem, 100% - 2rem);
+
+  margin-inline: auto;
+
+  font-size: var(--fz-500);
+}

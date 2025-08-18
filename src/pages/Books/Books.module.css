@@ -1,0 +1,36 @@
+.books {
+    display: grid;
+
+    place-content: center;
+
+    margin-inline: auto;
+
+    h1 {
+        text-align: center;
+    }
+
+    ul {
+        display: grid;
+        align-items: start;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+
+        margin-block: 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .books {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .books {
+        ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
