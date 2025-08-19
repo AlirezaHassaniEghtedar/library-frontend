@@ -47,9 +47,14 @@
     grid-row: 5 / span 1;
   }
 
-  button {
+  button.delete {
     grid-column: 5 / -1;
     grid-row: 6 / span 1;
+  }
+
+  button.update {
+    grid-column: 5 / -1;
+    grid-row: 7 / span 1;
   }
 }
 

@@ -26,7 +26,6 @@ export default function Book(): ReactNode {
     const fetchBook = async (): Promise<void> => {
       try {
         const res = await axios.get(`http://localhost:5000/books/${id}`);
-        console.log(res.data);
         setBook(res.data);
       } catch (err) {
         console.log(err);
@@ -68,8 +67,18 @@ export default function Book(): ReactNode {
       <p>Description : {book?.desc}</p>
       <p>Number of pages : {book?.pages}</p>
       <span>Price : {book?.price}$</span>
-      <Button color="danger" onClick={handleDeleteBook}>
+      <Button
+        color="danger"
+        onClick={handleDeleteBook}
+        className={styles.delete}
+      >
         Delete This Book <MingcuteDelete2Line />
+      </Button>
+      <Button className={styles.update}>
+        <Link to={`/update/${id}`}>
+          Update This Book
+          <MingcuteRightFill />
+        </Link>
       </Button>
     </div>
   );

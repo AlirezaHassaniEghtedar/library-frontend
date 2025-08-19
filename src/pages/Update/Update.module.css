@@ -1,0 +1,72 @@
+.update {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, auto);
+
+  grid-gap: 1rem;
+
+  margin: 2rem auto;
+
+  h2 {
+    text-align: center;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+
+    margin-block-end: 1rem;
+  }
+
+  img {
+    grid-column: 1 / span 3;
+    grid-row: 2 / -1;
+
+    align-self: start;
+    justify-self: stretch;
+
+    object-fit: cover;
+  }
+
+  form {
+    grid-column: 4 / -1;
+    grid-row: 2 / -1;
+
+    display: grid;
+    gap: 0.5rem;
+
+    font-size: var(--fz-500);
+
+    input,
+    textarea {
+      border: 1px solid var(--color-border-100);
+      border-radius: var(--border-radius-100);
+      outline: none;
+
+      caret-color: var(--color-text-300);
+
+      padding: 0.5rem;
+
+      transition: var(--transition);
+
+      &:hover,
+      &:focus {
+        border-color: var(--color-primary);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+
+      min-block-size: 3em;
+      max-block-size: 10em;
+    }
+  }
+}
+
+.book-not-found {
+  inline-size: 100%;
+  block-size: 100%;
+
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
