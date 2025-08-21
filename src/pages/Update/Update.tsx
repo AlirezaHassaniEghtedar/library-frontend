@@ -89,7 +89,9 @@ export default function Update(): ReactNode {
 
   return (
     <div className={styles.update}>
-      <h2>Update the Book : {book.title}</h2>
+      <h2>
+        Update the Book : <span>{book.title}</span>
+      </h2>
 
       <img src={book.cover} alt={`picture of the book : ${book.title}`} />
 
