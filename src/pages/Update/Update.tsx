@@ -102,6 +102,7 @@ export default function Update(): ReactNode {
           onChange={(e) =>
             setBook((old) => ({ ...old!, title: e.target.value }))
           }
+          required
         />
         <input
           type="text"
@@ -111,6 +112,7 @@ export default function Update(): ReactNode {
           onChange={(e) =>
             setBook((old) => ({ ...old!, releaseDate: e.target.value }))
           }
+          required
         />
         <input
           type="text"
@@ -120,6 +122,7 @@ export default function Update(): ReactNode {
           onChange={(e) =>
             setBook((old) => ({ ...old!, cover: e.target.value }))
           }
+          required
         />
         <input
           type="text"
@@ -129,6 +132,7 @@ export default function Update(): ReactNode {
           onChange={(e) =>
             setBook((old) => ({ ...old!, pages: e.target.value }))
           }
+          required
         />
         <input
           type="number"
@@ -138,6 +142,7 @@ export default function Update(): ReactNode {
           onChange={(e) =>
             setBook((old) => ({ ...old!, price: e.target.valueAsNumber }))
           }
+          required
         />
         <textarea
           rows={3}
@@ -147,6 +152,7 @@ export default function Update(): ReactNode {
           onChange={(e) =>
             setBook((old) => ({ ...old!, desc: e.target.value }))
           }
+          required
         />
 
         <Button type="submit">Update</Button>

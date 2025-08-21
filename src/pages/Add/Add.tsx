@@ -66,12 +66,22 @@ export default function Add(): ReactNode {
       <h2>Add A New Book</h2>
 
       <form onSubmit={handleSubmitForm}>
-        <input type="text" name="title" placeholder="title" />
-        <input type="text" name="releaseDate" placeholder="releaseDate" />
-        <input type="text" name="cover" placeholder="cover" />
-        <input type="text" name="pages" placeholder="number of pages" />
-        <input type="number" name="price" placeholder="price" />
-        <textarea rows={3} name="desc" placeholder="desc" />
+        <input type="text" name="title" placeholder="title" required />
+        <input
+          type="text"
+          name="releaseDate"
+          placeholder="releaseDate"
+          required
+        />
+        <input type="text" name="cover" placeholder="cover" required />
+        <input
+          type="text"
+          name="pages"
+          placeholder="number of pages"
+          required
+        />
+        <input type="number" name="price" placeholder="price" required />
+        <textarea rows={3} name="desc" placeholder="desc" required />
 
         <Button type="submit">Submit</Button>
       </form>

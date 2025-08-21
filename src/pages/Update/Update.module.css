@@ -59,6 +59,11 @@
       min-block-size: 3em;
       max-block-size: 10em;
     }
+
+    input:user-invalid,
+    textarea:user-invalid {
+      border-color: var(--color-danger);
+    }
   }
 }
 
