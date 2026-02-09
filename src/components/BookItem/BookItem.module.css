@@ -3,6 +3,12 @@
 
   gap: 0.25rem;
 
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
   color: var(--color-text-100);
 
   img {
