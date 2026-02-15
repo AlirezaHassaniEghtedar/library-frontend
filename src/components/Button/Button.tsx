@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 
 import clsx from "clsx";
 
-type Color = "primary" | "danger";
+type Color = "primary" | "danger" | "secondary";
 
 type Props = ComponentProps<"button"> & {
   color?: Color;

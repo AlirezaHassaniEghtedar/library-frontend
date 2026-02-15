@@ -11,6 +11,11 @@
   --color-primary-hover: hsl(204, 96%, 48%);
   --color-primary-hover-dark: hsl(204, 96%, 20%);
 
+  --color-secondary: hsl(0, 0%, 52%);
+  --color-secondary-fade: hsl(0, 0%, 92%);
+  --color-secondary-hover: hsl(0, 0%, 48%);
+  --color-secondary-hover-dark: hsl(0, 0%, 20%);
+
   --color-danger: hsl(0, 99%, 52%);
   --color-danger-fade: hsl(0, 99%, 92%);
   --color-danger-hover: hsl(0, 96%, 48%);

@@ -158,6 +158,9 @@ export default function Update(): ReactNode {
         />
 
         <Button type="submit">Update</Button>
+        <Button type="button" color="secondary" onClick={() => history.go(-1)}>
+          Cancel
+        </Button>
       </form>
     </div>
   );
